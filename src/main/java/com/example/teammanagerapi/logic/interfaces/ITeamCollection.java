@@ -1,5 +1,5 @@
 package com.example.teammanagerapi.logic.interfaces;
 
 public interface ITeamCollection {
-    void createTeam(String teamName);
+    void createTeam(String teamName) throws Exception;
 }
