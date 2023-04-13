@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @SpringBootApplication
-public class MyApplication {
+public class MyApplication {//test
     public static void main(String[] args) {
         SpringApplication.run(MyApplication.class, args);
     }
