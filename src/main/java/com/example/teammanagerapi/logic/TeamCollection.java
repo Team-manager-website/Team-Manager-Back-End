@@ -16,13 +16,6 @@ public class TeamCollection implements ITeamCollection {
     }
     @Override
     public void createTeam(String teamName) throws Exception {
-        dalteamCollection.createTeam(readOutJsonString(teamName));
-    }
-
-    private static String readOutJsonString(String jsonString) throws Exception {
-        ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode jsonNode = objectMapper.readTree(jsonString);
-        String inputString = jsonNode.get("input").asText();
-        return inputString;
+        dalteamCollection.createTeam(ReadJson.readOutJsonString(teamName, "input"));
     }
 }
