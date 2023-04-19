@@ -1,0 +1,38 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
+image: maven:latest
+
+stages:
+  - build
+  - test
+  - package
+  - deploy
+
+build_job:
+  stages: build
+  tags:
+    - docker
+
+  script:
+    - echo "Maven compile started"
+    - "mvn compile"
+
+
+test_job:
+  stage: test
+  tags:
+    -docker
+
+  script:
+    - echo "Maven test started"
+    - "mvn test"
+
+
+test_deploy:
+  stage: deploy
+  tags:
+    -docker
+
+  script:
+    - echo "Maven deploy started"
