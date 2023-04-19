@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Run tests
-      run: docker run my-image-name:$(date +%s) <command-to-run-tests>
+      run: docker run my-image-name:$(date +%s) sh -c "cd src/test/java/com/example/teammanagerapi && mvn test"
