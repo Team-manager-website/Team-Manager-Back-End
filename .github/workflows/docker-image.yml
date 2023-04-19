@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag my-image-name:openjdk:11-jre-slim
     - name: Run tests
-      run: docker run my-image-name:$(date +%s) sh -c "cd src/test/java/com/example/teammanagerapi && mvn test"
+      run: docker run my-image-name:openjdk:11-jre-slim sh -c "cd src/test/java/com/example/teammanagerapi && mvn test"
