@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Log in to Docker registry
-      run: docker login -u <cedje> -p ${{ secrets.dckr_pat_As-i8kXvtFIRJswlouCBgvBMVOQ }} <https://hub.docker.com/>
+      run: docker login -u <cedje> -p ${{ secrets.dckr_pat_As-i8kXvtFIRJswlouCBgvBMVOQ }} <https://index.docker.io/v1>
     - name: Run tests
       run: docker run my-image-name:$(date +%s) npm test
