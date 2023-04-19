@@ -34,5 +34,3 @@ jobs:
 #         logout: # optional, default is true
     - name: Run tests
       run: docker run my-image-name:image-github npm test
-
-      
