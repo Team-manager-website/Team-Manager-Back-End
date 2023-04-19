@@ -18,5 +18,8 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Log in to Docker registry
       run: docker login -u ${{ secrets.cedje }} -p ${{ secrets.dckr_pat_As-i8kXvtFIRJswlouCBgvBMVOQ }}
-    - name: Run tests
-      run: docker run my-image-name:$(date +%s) npm test
+    - name: Docker compose tests run
+      # You may pin to the exact commit or the version.
+      # uses: cloudposse/github-action-docker-compose-test-run@671dee146ba5801af21357d5b3029f4439b9a2fd
+      uses: cloudposse/github-action-docker-compose-test-run@0.1.2
+      
