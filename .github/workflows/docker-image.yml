@@ -15,7 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag my-image-name:$("test")
     - name: Docker Login
       # You may pin to the exact commit or the version.
       # uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
@@ -32,6 +33,6 @@ jobs:
         # Log out from the Docker registry at the end of a job
 #         logout: # optional, default is true
     - name: Run tests
-      run: docker run my-image-name:$(date +%s) npm test
+      run: docker run my-image-name:$("test") npm test
 
       
