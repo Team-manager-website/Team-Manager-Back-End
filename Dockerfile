@@ -1,26 +1,25 @@
 # Use an official Java runtime as a base image
 FROM openjdk:11-jre-slim
+# Use a base image with Node.js pre-installed
+FROM node:14
 
-# Set the working directory in the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the Java application JAR file to the container
-COPY src/main/java/com/example/teammanagerapi/ /app/src/main/java/com/example/teammanagerapi/
+# Copy the package.json and package-lock.json files to the container
+COPY package*.json ./
 
-# Expose the port that the application will run on
+# Install dependencies
+RUN npm ci
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Build the application (if necessary)
+RUN npm run build
+
+# Expose any necessary ports
 EXPOSE 8090
 
-# Install MySQL client dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    default-mysql-client \
-    && rm -rf /var/lib/apt/lists/*
-
-# Set the environment variables for the MySQL connection
-ENV MYSQL_HOST=my-mysql-container
-ENV MYSQL_PORT=3306
-ENV MYSQL_DB=my-database
-ENV MYSQL_USER=root
-ENV MYSQL_PASSWORD=my-password
-
-# Start the Java application
-CMD ["java", "-jar"]
+# Start the application
+CMD ["npm", "start"]
