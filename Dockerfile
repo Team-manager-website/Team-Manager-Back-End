@@ -8,7 +8,7 @@ WORKDIR /app
 COPY src/main/java/com/example/teammanagerapi/ /app/src/main/java/com/example/teammanagerapi/
 
 # Expose the port that the application will run on
-EXPOSE 8090
+EXPOSE 8080
 
 # Start the Java application
 CMD ["java", "-jar"]
