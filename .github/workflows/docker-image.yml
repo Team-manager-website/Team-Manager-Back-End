@@ -27,10 +27,10 @@ jobs:
 
 
 
-#    - name: Build with Maven
-#      run: mvn package
-#
-#    - name: Run tests
-#      run: mvn test
+    - name: Build with Maven
+      run: mvn package
+
     - name: Run tests
-      run: docker run cedje/teammanager:team sh -c "cd src/test/java/com/example/teammanagerapi/TeamManagerApiApplicationTest"
+      run: mvn test
+#    - name: Run tests
+#      run: docker run cedje/teammanager:team sh -c "cd src/test/java/com/example/teammanagerapi/TeamManagerApiApplicationTest"
