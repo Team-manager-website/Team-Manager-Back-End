@@ -1,8 +1,7 @@
-auth0:
-  audience: http://teammanager/api
 spring:
   security:
     oauth2:
       resource-server:
         jwt:
           issuer-uri: https://dev-gm2f3obz.us.auth0.com/
+          audience: http://teammanager/api

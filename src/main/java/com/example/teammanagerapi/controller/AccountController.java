@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/account", produces = MediaType.APPLICATION_JSON_VALUE)
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:5173")
 public class AccountController {
     private IUserCollection userCollection;
     @Autowired
