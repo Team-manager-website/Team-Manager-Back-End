@@ -23,7 +23,10 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
   test:
+    - runs-on: ubuntu-latest
+
+      steps:
 #    - name: Run tests
 #      run: docker run my-image-name:$(date +%s) sh -c "cd src/test/java/com/example/teammanagerapi/TeamManagerApiApplicationTest"
-    - name: Test
-      run: mvn test
+      - name: Test
+        run: mvn test
