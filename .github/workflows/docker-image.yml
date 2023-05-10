@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build:
+  build-test:
 
     runs-on: ubuntu-latest
 #dckr_pat_3cPyUe9F4Nn9A5CGwe0NrhNh-j8
