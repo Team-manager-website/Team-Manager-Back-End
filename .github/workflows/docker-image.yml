@@ -20,10 +20,10 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag my-image-name:team
 
     - name: Push image
-      run: docker push my-image-name:$(date +%s)
+      run: docker push my-image-name:team
 
 
 
@@ -33,5 +33,5 @@ jobs:
 #    - name: Run tests
 #      run: mvn test
     - name: Run tests
-      run: docker run my-image-name:$(date +%s) sh -c "cd src/test/java/com/example/teammanagerapi/TeamManagerApiApplicationTest"
+      run: docker run my-image-name:team sh -c "cd src/test/java/com/example/teammanagerapi/TeamManagerApiApplicationTest"
 
