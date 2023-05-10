@@ -34,4 +34,3 @@ jobs:
 #      run: mvn test
     - name: Run tests
       run: docker run my-image-name:team sh -c "cd src/test/java/com/example/teammanagerapi/TeamManagerApiApplicationTest"
-
