@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build-test:
+  build:
 
     runs-on: ubuntu-latest
 #dckr_pat_3cPyUe9F4Nn9A5CGwe0NrhNh-j8
@@ -21,5 +21,9 @@ jobs:
 #        password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+  test:
+#    - name: Run tests
+#      run: docker run my-image-name:$(date +%s) sh -c "cd src/test/java/com/example/teammanagerapi/TeamManagerApiApplicationTest"
     - name: Test
       run: mvn test
