@@ -21,11 +21,7 @@ jobs:
 #        password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-        docker tag my-image-name:$(date +%s) my-docker-username/my-repository-name:$(date +%s)
-        docker push my-docker-username/my-repository-name:$(date +%s)
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
 
 #    - name: Build with Maven
 #      run: mvn package
