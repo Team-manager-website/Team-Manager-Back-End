@@ -14,16 +14,6 @@ jobs:
 #dckr_pat_3cPyUe9F4Nn9A5CGwe0NrhNh-j8
     steps:
     - uses: actions/checkout@v3
-    - name: Set up JDK 17
-      uses: actions/setup-java@v2
-      with:
-        java-version: 17
-
-    - name: Build with Maven
-      run: mvn clean install
-
-    - name: Run tests with Maven
-      run: mvn test
 
     - name: Login to Docker Hub
       uses: docker/login-action@v2
@@ -35,11 +25,6 @@ jobs:
 
     - name: Push image
       run: docker push cedje/teammanager:team
-
-    - name: Set up JDK 11
-      uses: actions/setup-java@v1
-      with:
-        java-version: 11
 
 #    - name: Build with Maven
 #      run: mvn package
