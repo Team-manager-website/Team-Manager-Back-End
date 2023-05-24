@@ -27,7 +27,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
           branch: dev
           title: Automated Pull Request from CI/CD
           body: |
@@ -35,3 +35,4 @@ jobs:
             Please review and merge the changes if they meet the required criteria.
 
 
+#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
