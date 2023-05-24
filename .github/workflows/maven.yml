@@ -25,10 +25,11 @@ jobs:
       - name: Run tests
         run: mvn test --file pom.xml
       - name: Create Pull Request
-        uses: basjebasie/dev@v3
+        uses: Team-manager-website/Team-Manager-Back-End@v3
         with:
           token: ${{ secrets.TOKEN }}
           branch: dev
+          base: master
           title: Automated Pull Request from CI/CD
           body: |
             This pull request is automatically created by the CI/CD workflow.
