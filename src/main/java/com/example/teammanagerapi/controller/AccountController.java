@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/account", produces = MediaType.APPLICATION_JSON_VALUE)
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class AccountController {
     private IUserCollection userCollection;
     @Autowired
@@ -15,7 +15,7 @@ public class AccountController {
         this.userCollection = userCollection;
     }
     @PostMapping("/CreateAccount")
-    public String GetTeamName(@RequestBody String jsonData) throws Exception {
+    public String CreateAccount(@RequestBody String jsonData) throws Exception {
 
         userCollection.CreateAccount(jsonData);
         return jsonData;
