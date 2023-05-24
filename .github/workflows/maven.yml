@@ -24,6 +24,14 @@ jobs:
         run: mvn -B package --file pom.xml
       - name: Run tests
         run: mvn test --file pom.xml
-
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: dev
+          title: Automated Pull Request from CI/CD
+          body: |
+            This pull request is automatically created by the CI/CD workflow.
+            Please review and merge the changes if they meet the required criteria.
 
 
