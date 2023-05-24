@@ -2,6 +2,7 @@ package com.example.teammanagerapi.controller;
 
 import com.example.teammanagerapi.dal.interfacesjpa.ITeamRepository;
 import com.example.teammanagerapi.dal.jpa.Team;
+import com.mashape.unirest.http.Unirest;
 import jakarta.annotation.PostConstruct;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,6 +19,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+
+import java.net.http.HttpResponse;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -49,6 +53,15 @@ class TeamControllerTest {
         assertNotNull(savedTeam);
         assertEquals("VVV", savedTeam);
     }
+
+//    private String getAuthToken() throws Exception {
+//        HttpResponse<String> response = (HttpResponse<String>) Unirest.post("https://dev-gm2f3obz.us.auth0.com/oauth/token")
+//                .header("content-type", "application/x-www-form-urlencoded")
+//                .body("grant_type=client_credentials&client_id=%24%7Baccount.clientId%7D&client_secret=0dYaxu_EVlDiuJdLrFCEnZ5UxDVkA_oR97OIZ21kokFsUjLPo-IZdtpWjxo6vlNQ&audience=http://teammanager/api")
+//                .asString();
+//        System.out.println(response);
+//        return " ";
+//    }
 
 
 //    @Test
