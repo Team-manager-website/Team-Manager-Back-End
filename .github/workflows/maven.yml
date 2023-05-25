@@ -27,7 +27,7 @@ jobs:
       - name: Create Pull Request
         uses: basjebasie/Team-manager-website/Team-Manager-Back-End
 
-with:
+        with:
           token: ${{ secrets.TOKEN }}
           branch: dev
           base: master
