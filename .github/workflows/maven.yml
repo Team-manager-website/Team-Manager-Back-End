@@ -24,16 +24,16 @@ jobs:
         run: mvn -B package --file pom.xml
       - name: Run tests
         run: mvn test --file pom.xml
-      - name: Create Pull Request
-        uses: basjebasie/Team-manager-website/Team-Manager-Back-End
-
-        with:
-          token: ${{ secrets.TOKEN }}
-          branch: dev
-          base: master
-          title: Automated Pull Request from CI/CD
-          body: |
-            This pull request is automatically created by the CI/CD workflow.
-            Please review and merge the changes if they meet the required criteria.
+#      - name: Create Pull Request
+#        uses: basjebasie/Team-manager-website/Team-Manager-Back-End
+#
+#        with:
+#          token: ${{ secrets.TOKEN }}
+#          branch: dev
+#          base: master
+#          title: Automated Pull Request from CI/CD
+#          body: |
+#            This pull request is automatically created by the CI/CD workflow.
+#            Please review and merge the changes if they meet the required criteria.
 
 #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
