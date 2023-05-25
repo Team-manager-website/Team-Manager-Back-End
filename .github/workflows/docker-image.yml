@@ -38,6 +38,6 @@ jobs:
 
     - name: Build and run Docker container
       run: |
-        docker build . --file teammanager --tag my-java-app:latest
+        docker build . --file teammanager:team --tag my-java-app:latest
               docker run my-java-app:latest
 
