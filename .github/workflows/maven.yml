@@ -25,8 +25,9 @@ jobs:
       - name: Run tests
         run: mvn test --file pom.xml
       - name: Create Pull Request
-        uses: orgin/dev@v3
-        with:
+        uses: basjebasie/Team-manager-website/Team-Manager-Back-End
+
+with:
           token: ${{ secrets.TOKEN }}
           branch: dev
           base: master
