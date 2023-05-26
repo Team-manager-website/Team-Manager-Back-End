@@ -1,8 +1,6 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
@@ -11,7 +9,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-#dckr_pat_3cPyUe9F4Nn9A5CGwe0NrhNh-j8
+
     steps:
     - uses: actions/checkout@v3
 
@@ -36,8 +34,5 @@ jobs:
     - name: Build with Maven
       run: mvn package --file pom.xml
 
-#    - name: Build and run Docker container
-#      run: |
-#        docker build . --file cedje/TeamManagerApi --tag my-java-app:latest
-#              docker run my-java-app:latest
+
 
