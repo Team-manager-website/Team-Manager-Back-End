@@ -5,10 +5,10 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the Java application JAR file to the container
-COPY src/main/java/com/example/teammanagerapi/ /app/src/main/java/com/example/teammanagerapi/
+COPY target/TeamManagerApi-0.0.1-SNAPSHOT.jar /app/
 
 # Expose the port that the application will run on
 EXPOSE 8080
 
 # Start the Java application
-CMD ["java", "-jar"]
+CMD ["java", "-jar", "TeamManagerApi-0.0.1-SNAPSHOT.jar"]
