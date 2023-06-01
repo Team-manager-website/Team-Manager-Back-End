@@ -8,7 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/team", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/api/team", produces = MediaType.APPLICATION_JSON_VALUE)
 @CrossOrigin(origins = "http://localhost:5173")
 public class TeamController {
     private ITeamCollection teamCollection;
