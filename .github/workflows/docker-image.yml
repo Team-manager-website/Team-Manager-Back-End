@@ -15,6 +15,7 @@ jobs:
         image: mysql
         env:
           MYSQL_DATABASE: teammanager
+          MYSQL_ROOT_PASSWORD: root
 
     steps:
     - uses: actions/checkout@v3
