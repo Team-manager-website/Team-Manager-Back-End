@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/api/account", produces = MediaType.APPLICATION_JSON_VALUE)
 @CrossOrigin(origins = "http://localhost:5173")
 public class AccountController {
-    private IUserCollection userCollection;
+    private final IUserCollection userCollection;
     @Autowired
     AccountController(IUserCollection userCollection){
         this.userCollection = userCollection;
