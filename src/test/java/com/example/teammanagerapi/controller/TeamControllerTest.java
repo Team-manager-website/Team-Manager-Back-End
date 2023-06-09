@@ -32,16 +32,15 @@ class TeamControllerTest {
 
     @Test
     void getTeamName() throws Exception {
-//        String teamName = "{\"input\":\"VVV\"}";
-//        mockMvc.perform(post("/api/team/CreateTeam")
-//                        .header("authorization", "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFpc0xNdnJPcklGa2MwZjQ1UzJ4ZyJ9.eyJpc3MiOiJodHRwczovL2Rldi1nbTJmM29iei51cy5hdXRoMC5jb20vIiwic3ViIjoiNUNLVDd5aFFnOWJyUXViOTIydjVBVnQyWmJnVTEzUUxAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly90ZWFtbWFuYWdlci9hcGkiLCJpYXQiOjE2ODYyMTE1NzIsImV4cCI6MTY4NjI5Nzk3MiwiYXpwIjoiNUNLVDd5aFFnOWJyUXViOTIydjVBVnQyWmJnVTEzUUwiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.FzdgbVTHJaNsrarJLyBrFnqDMmylyw6ZZPParmfvtqXHOFhzXrzGF7IRfOcuU9sBFR91kKyFv_AxgYJgG046bzM0qDVjlDoehRVZr-CumZdyLSRVy_S8UdwFjCu3XmUBwtueM89uFsNqqM6PzOvADKQAdMb_cI2XLYJ4GMN4RG4RZ5h0rbT71ZBaYo8ZESHbHcEuwP0xVNJ4QWvW8GXMpZjm4Bc1ukKa7J6yaezWF7TAZjUYGXI9ezHcOTH2IVEVj6lNSnX4baDP6bt7LRVnPrzRvsmRb3oJ_P94CsR4NU4AUntKc5d9fWewzTqvpZQa57P1k4wkuUk7U-hATJOwyg")
-//                        .contentType(MediaType.APPLICATION_JSON)
-//                        .content(teamName));
-//                //.andExpect(status().isOk());
-//        String savedTeam = teamRepository.findByTeamName("VVV");
-//        assertNotNull(savedTeam);
-//        assertEquals("VVV", savedTeam);
-        assertTrue(true);
+        String teamName = "{\"input\":\"VVV\"}";
+        mockMvc.perform(post("/api/team/CreateTeam")
+                        .header("authorization", "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFpc0xNdnJPcklGa2MwZjQ1UzJ4ZyJ9.eyJpc3MiOiJodHRwczovL2Rldi1nbTJmM29iei51cy5hdXRoMC5jb20vIiwic3ViIjoiNUNLVDd5aFFnOWJyUXViOTIydjVBVnQyWmJnVTEzUUxAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly90ZWFtbWFuYWdlci9hcGkiLCJpYXQiOjE2ODYzMTkzNDUsImV4cCI6MTY4NjQwNTc0NSwiYXpwIjoiNUNLVDd5aFFnOWJyUXViOTIydjVBVnQyWmJnVTEzUUwiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.k3UgWj-1OtT_GimB59JdYOeLSVbki6zAoRx2WAc4eDkfffFs2sNL7JvkTxBZ9IhVv2LgSzHIWfLg1pG9rPQeRZ05nQtOjHB3NizRfFuokvHS2vdn6OpQtUNg_iCsrtY5U0yWsPvdwA38X7-zg3BzEdUs0Kq2CxxPSaSxivW6BL2S4TFUJLWizBnu246CR-ajJuOeBfdpDFro6si-9Qd8BAotaNd-Ek7xtHUZByhgVWS5PUfFPMr6wXe5nlfOCWTrbasm26TxWaka98yWIl86wkYebQUKGgznuacrR4CAJlUFq4iTqDq7URAmUCfPLyv2K1GZNb4a8VVeKugO6ZjaGg")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(teamName));
+                //.andExpect(status().isOk());
+        String savedTeam = teamRepository.findByTeamName("VVV");
+        assertNotNull(savedTeam);
+        assertEquals("VV", savedTeam);
     }
 
 //    private String getAuthToken() throws Exception {
