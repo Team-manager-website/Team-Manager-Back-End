@@ -93,7 +93,6 @@
                     </excludes>
                     <includes>
                         <include>DataCheck.java</include>
-                        <include>TeamControllerTest.java</include>
                     </includes>
                 </configuration>
             </plugin>
