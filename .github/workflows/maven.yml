@@ -23,7 +23,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Run tests
-        run: mvn test --file pom.xml
+        run: mvn test
 
 
 #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
