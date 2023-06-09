@@ -40,7 +40,7 @@ class TeamControllerTest {
                 //.andExpect(status().isOk());
         String savedTeam = teamRepository.findByTeamName("VVV");
         assertNotNull(savedTeam);
-        assertEquals("VVV", savedTeam);
+        assertEquals("VV", savedTeam);
     }
 
 //    private String getAuthToken() throws Exception {
