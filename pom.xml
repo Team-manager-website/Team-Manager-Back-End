@@ -92,7 +92,7 @@
                         <exclude>DataTest.java</exclude>
                     </excludes>
                     <includes>
-<!--                        <include>DataCheck.java</include>-->
+                        <include>DataCheck.java</include>
 <!--                        <include>com\example\teammanagerapi\controller\AccountControllerTest.javaTeamControllerTest.java</include>-->
                     </includes>
                 </configuration>
