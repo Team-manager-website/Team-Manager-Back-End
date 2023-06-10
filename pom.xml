@@ -92,10 +92,10 @@
 <!--                    <excludes>-->
 <!--                        <exclude>DataTest.java</exclude>-->
 <!--                    </excludes>-->
-                    <includes>
+<!--                    <includes>-->
 <!--                        <include>DataCheck.java</include>-->
-                        <include>src/main/test/java/com/example/teammanagerapi/controller/TeamControllerTest.java</include>
-                    </includes>
+                        <testSourceDirectory>src/main/test/java/com/example/teammanagerapi/controller/TeamControllerTest.java</testSourceDirectory>
+<!--                    </includes>-->
                 </configuration>
             </plugin>
 <!--            <plugin>-->
