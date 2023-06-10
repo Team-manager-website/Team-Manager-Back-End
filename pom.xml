@@ -94,7 +94,7 @@
 <!--                    </excludes>-->
                     <includes>
 <!--                        <include>DataCheck.java</include>-->
-                        <include>com\example\teammanagerapi\controller\AccountControllerTest.javaTeamControllerTest.java</include>
+                        <include>com/example/teammanagerapi/controller/TeamControllerTest.java</include>
                     </includes>
                 </configuration>
             </plugin>
