@@ -1,6 +1,6 @@
 package com.example.teammanagerapi.controller;
 
-import com.example.teammanagerapi.dal.interfacesjpa.IUserRepository;
+//import com.example.teammanagerapi.dal.interfacesjpa.IUserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +17,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @SpringBootTest
 @AutoConfigureMockMvc
 public class AccountControllerTest {
-    @Autowired
-    private IUserRepository userRepository;
+//    @Autowired
+//    private IUserRepository userRepository;
 
     @Autowired
     private MockMvc mockMvc;

@@ -1,6 +1,6 @@
 package com.example.teammanagerapi.controller;
 
-import com.example.teammanagerapi.dal.interfacesjpa.ITeamRepository;
+//import com.example.teammanagerapi.dal.interfacesjpa.ITeamRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +24,8 @@ class TeamControllerTest {
 //    @Autowired
 //    private TestRestTemplate restTemplate;
 
-    @Autowired
-    private ITeamRepository teamRepository;
+//    @Autowired
+//    private ITeamRepository teamRepository;
 
     @Autowired
     private MockMvc mockMvc;
