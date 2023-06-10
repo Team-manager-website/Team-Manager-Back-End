@@ -94,7 +94,7 @@
 <!--                    </excludes>-->
 <!--                    <includes>-->
 <!--                        <include>DataCheck.java</include>-->
-                        <testSourceDirectory>src/main/test/java/com/example/teammanagerapi/controller/TeamControllerTest.java</testSourceDirectory>
+<!--                        <testSourceDirectory>src/main/test/java/com/example/teammanagerapi/controller/TeamControllerTest.java</testSourceDirectory>-->
 <!--                    </includes>-->
                 </configuration>
             </plugin>
