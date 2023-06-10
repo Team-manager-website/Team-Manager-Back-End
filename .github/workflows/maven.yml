@@ -26,6 +26,9 @@ jobs:
         run: mvn clean install -B
       - name: Run tests
         run: mvn test
+      - name: Publish Test Report
+        if: success() || failure()
+        uses: scacap/action-surefire-report@v1
 
 
 #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
