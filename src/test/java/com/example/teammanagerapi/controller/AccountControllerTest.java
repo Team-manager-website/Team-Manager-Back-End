@@ -10,8 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 @ExtendWith(SpringExtension.class)
@@ -28,7 +27,7 @@ public class AccountControllerTest {
     void checkIfYouCanChangeYourName() throws Exception {
         String teamName = "{\"name\":\"Cedric\",\"userId\":\"5\"}";
         mockMvc.perform(post("/api/account/CreateAccount")
-                .header("authorization", "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFpc0xNdnJPcklGa2MwZjQ1UzJ4ZyJ9.eyJpc3MiOiJodHRwczovL2Rldi1nbTJmM29iei51cy5hdXRoMC5jb20vIiwic3ViIjoiNUNLVDd5aFFnOWJyUXViOTIydjVBVnQyWmJnVTEzUUxAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly90ZWFtbWFuYWdlci9hcGkiLCJpYXQiOjE2ODYzMTkzNDUsImV4cCI6MTY4NjQwNTc0NSwiYXpwIjoiNUNLVDd5aFFnOWJyUXViOTIydjVBVnQyWmJnVTEzUUwiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.k3UgWj-1OtT_GimB59JdYOeLSVbki6zAoRx2WAc4eDkfffFs2sNL7JvkTxBZ9IhVv2LgSzHIWfLg1pG9rPQeRZ05nQtOjHB3NizRfFuokvHS2vdn6OpQtUNg_iCsrtY5U0yWsPvdwA38X7-zg3BzEdUs0Kq2CxxPSaSxivW6BL2S4TFUJLWizBnu246CR-ajJuOeBfdpDFro6si-9Qd8BAotaNd-Ek7xtHUZByhgVWS5PUfFPMr6wXe5nlfOCWTrbasm26TxWaka98yWIl86wkYebQUKGgznuacrR4CAJlUFq4iTqDq7URAmUCfPLyv2K1GZNb4a8VVeKugO6ZjaGg")
+                .header("authorization", "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFpc0xNdnJPcklGa2MwZjQ1UzJ4ZyJ9.eyJpc3MiOiJodHRwczovL2Rldi1nbTJmM29iei51cy5hdXRoMC5jb20vIiwic3ViIjoiNUNLVDd5aFFnOWJyUXViOTIydjVBVnQyWmJnVTEzUUxAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly90ZWFtbWFuYWdlci9hcGkiLCJpYXQiOjE2ODY2MDA2MjIsImV4cCI6MTY4NjY4NzAyMiwiYXpwIjoiNUNLVDd5aFFnOWJyUXViOTIydjVBVnQyWmJnVTEzUUwiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.IL_Nj2WVEKDKfTpvAUeGY4hPnCc6_gCvosESqrdTkN3t_QXTrBmzDVJ3J65jh1IwShZKAyaouWOACIF1nl1iSDUuVz-UEsoykpcZx2MC9iXOP_SiQxU4qg7R33cweVolPog1ZDO70xAxQSYXKPW6kYUVWshauQ1bJby3G_68djr4T8YDs_5Xy3Sg7SiFgpJmwjBmCAVWmB6EKiNLUOV9v7w9cLd0K2t0dYSE9cPrmBO1pCberEXsJk-kBpQo9QsfOHCKD5-k-61xDEyF2AECgbakKD-iHEehpXPJZVsGRUzs2FrZ3qWT8fg4nt2BCRdaWD0C3chNGiGSnS9m9ti0gA")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(teamName));
         //.andExpect(status().isOk());
